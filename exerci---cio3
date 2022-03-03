@@ -1,0 +1,25 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        double valorVendas, TaxaImposto;
+                Scanner input = new Scanner(System.in);
+
+        System.out.println("Digite o valor total das vendas");
+        valorVendas = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite o % de impostos");
+        TaxaImposto = Double.parseDouble(input.nextLine());
+
+        double resultado = somaImposto(TaxaImposto, valorVendas);
+        System.out.println("Resultado com impostos:" + resultado);
+
+    }
+
+    public static double somaImposto(double taxaImposto, double valorVendas) {
+        return valorVendas + (valorVendas * taxaImposto/100);
+    }
+}
